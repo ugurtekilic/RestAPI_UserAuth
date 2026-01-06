@@ -38,3 +38,19 @@ Bu proje, modern güvenlik standartları (JWT, BCrypt, Rate Limiting) kullanıla
     ├── Forms/          # Login, Register ve Dashboard ekranları
     ├── Models/         # API ile uyumlu DTO sınıfları
     └── Program.cs      # Uygulama başlangıç noktası
+
+### ⚙️ Kurulum ve Yapılandırma
+**1. Veritabanı Hazırlığı
+**MariaDB veya MySQL üzerinde aşağıdaki tabloyu oluşturun:
+
+**CREATE DATABASE UserDb;
+**USE UserDb;
+
+**CREATE TABLE Users (
+    **Id INT AUTO_INCREMENT PRIMARY KEY,
+    **Username VARCHAR(50) NOT NULL,
+    **Email VARCHAR(100) NOT NULL,
+    **Password VARCHAR(255) NOT NULL,
+    **AccessFailedCount INT DEFAULT 0,
+    **LockoutEnd DATETIME NULL
+**);

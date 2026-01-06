@@ -25,21 +25,7 @@ Bu proje, modern güvenlik standartları (JWT, BCrypt, Rate Limiting) kullanıla
 - **HttpClient:** API ile JSON veri alışverişi.
 - **DTOs:** Veri taşıma nesneleri ile temiz kod yapısı.
 
-## 📂 Proje Yapısı
-
-```text
-├── UserAuthApi (Web API)
-│   ├── Controllers/    # API Endpoint'leri (Auth/Login/Register)
-│   ├── Data/           # DbContext ve Veritabanı Yapılandırması
-│   ├── Models/         # Veritabanı tabloları ve DTO'lar
-│   └── Program.cs      # Güvenlik ve Middleware ayarları
-│
-└── UserAuthWinForm (İstemci)
-    ├── Forms/          # Login, Register ve Dashboard ekranları
-    ├── Models/         # API ile uyumlu DTO sınıfları
-    └── Program.cs      # Uygulama başlangıç noktası
-
-### ⚙️ Kurulum ve Yapılandırma
+- ### ⚙️ Kurulum ve Yapılandırma
 **1. Veritabanı Hazırlığı
 **MariaDB veya MySQL üzerinde aşağıdaki tabloyu oluşturun:
 
@@ -54,3 +40,19 @@ Bu proje, modern güvenlik standartları (JWT, BCrypt, Rate Limiting) kullanıla
     **AccessFailedCount INT DEFAULT 0,
     **LockoutEnd DATETIME NULL
 **);
+
+## 📂 Proje Yapısı
+
+```text
+├── UserAuthApi (Web API)
+│   ├── Controllers/    # API Endpoint'leri (Auth/Login/Register)
+│   ├── Data/           # DbContext ve Veritabanı Yapılandırması
+│   ├── Models/         # Veritabanı tabloları ve DTO'lar
+│   └── Program.cs      # Güvenlik ve Middleware ayarları
+│
+└── UserAuthWinForm (İstemci)
+    ├── Forms/          # Login, Register ve Dashboard ekranları
+    ├── Models/         # API ile uyumlu DTO sınıfları
+    └── Program.cs      # Uygulama başlangıç noktası
+
+

@@ -29,17 +29,17 @@ Bu proje, modern güvenlik standartları (JWT, BCrypt, Rate Limiting) kullanıla
 **1. Veritabanı Hazırlığı
 **MariaDB veya MySQL üzerinde aşağıdaki tabloyu oluşturun:
 
-**CREATE DATABASE UserDb;
-**USE UserDb;
+- **CREATE DATABASE UserDb;
+- **USE UserDb;
 
-**CREATE TABLE Users (
-    **Id INT AUTO_INCREMENT PRIMARY KEY,
-    **Username VARCHAR(50) NOT NULL,
-    **Email VARCHAR(100) NOT NULL,
-    **Password VARCHAR(255) NOT NULL,
-    **AccessFailedCount INT DEFAULT 0,
-    **LockoutEnd DATETIME NULL
-**);
+- **CREATE TABLE Users (
+  - **Id INT AUTO_INCREMENT PRIMARY KEY,
+  - **Username VARCHAR(50) NOT NULL,
+  - **Email VARCHAR(100) NOT NULL,
+  - **Password VARCHAR(255) NOT NULL,
+  - **AccessFailedCount INT DEFAULT 0,
+  - **LockoutEnd DATETIME NULL
+- **);
 
 ## 📂 Proje Yapısı
 
